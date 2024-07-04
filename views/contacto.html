@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Formulario de Pedidos </title>
+        <link rel="stylesheet" href="../public/css/global.css" type="text/css">
+        <link rel="stylesheet" href="../public/css/contacto.css" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+
+    <body>
+        <main class="Contorno Principal">
+            <div class="BannerLogo">
+                <img src="../public/img/Logo - Marca/LetraMMnegroFT.png">
+            </div>
+            <div>
+                <nav class="OpcionesMenu">
+                    <ul>
+                        <li><a href="index.html"> Inicio </a></li>
+                        <li><a href="quienesSomos.html"> Quienes somos </a></li>
+                        <li><a href="productos.html"> Productos </a></li>
+                        <li><a href="formularioEnvio.html"> Mi carrito </a></li>
+                        <li><a href="contacto.html"> Contacto </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </main>
+
+        <h1>Contacta con Nosotros</h1>
+        <p>
+
+        </p>
+        <p>¡Encuéntranos fácilmente o déjanos un mensaje! Estamos disponibles para ayudarte en lo que necesites.</p>
+
+        <div class="contenedor-contacto">
+            <div class="contacto">
+                <a href="tel:+123456789"><i class="fas fa-phone"></i> +123456789</a>
+                <a href="mailto:info@example.com"><i class="fas fa-envelope"></i> info@example.com</a>
+                <a href="https://wa.me/123456789"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+
+            <form action="https://formspree.io/f/mayrkygy" method="post" class="cuadro" id="formulario-consulta">
+                <label for="nombre">Nombre y Apellido</label><br>
+                <input type="text" name="name" id="nombre-consulta" placeholder="First and Last" required=""><br>
+                <label for="email-address">Correo electrónico</label><br>
+                <input type="email" name="_replyto" id="email" placeholder="email@domain.tld" required=""><br>
+                <label for="message">Consulta</label><br>
+                <textarea rows="5" name="message" id="message" placeholder="Escriba aquí tu consulta." required=""></textarea><br>
+                <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission"><br>
+                <input type="submit" class="boton" value="Enviar Consulta"><br>
+            </form>
+
+            <section class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.5934056243345!2d-58.70198852499669!3d-34.664969972932376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbf86ef457285%3A0xd8055b178c177d4c!2sUniversidad%20Nacional%20del%20Oeste!5e0!3m2!1ses!2sar!4v1695747016879!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+        </div>
+
+    <footer class="credito"> 
+        <p> Derechos Reservados &copy; 2024 - Ruth Gomez</p>
+    </footer>
+
+    <script src="../public/js/scriptContacto.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    </body>
+</html>

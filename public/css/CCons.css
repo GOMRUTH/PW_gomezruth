@@ -1,0 +1,19 @@
+  /* Estilos para los botones */
+  .opciones {
+    background-color: #b18ab2; /* Color de fondo */
+    color: white; /* Color del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    padding: 10px 20px; /* Padding interno para aumentar el área de clic */
+    border: none; /* Sin bordes */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickeable */
+    transition: box-shadow 0.3s, transform 0.3s; /* Transiciones suaves para la sombra y transformación */
+    border-radius: 4px; /* Bordes redondeados */
+    width: 25%; /* Ancho fijo para cada botón */
+    text-align: center; /* Asegura que el texto esté centrado */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Añade una sombra sutil para un efecto 3D */
+}
+
+.opciones:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más prominente en estado hover para un efecto elevado */
+    transform: translateY(-2px); /* Levanta ligeramente el botón al pasar el mouse */
+}

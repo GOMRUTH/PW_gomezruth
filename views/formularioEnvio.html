@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Formulario de Pedidos </title>
+        <link rel="stylesheet" href="../public/css/global.css" type="text/css">
+        <link rel="stylesheet" href="../public/css/formPedido.css" type="text/css">
+        <script src="../public/js/scriptEnvioPedidos.js" defer></script>
+    </head>
+
+    <body>
+        <main class="Contorno Principal">
+            <div class="BannerLogo">
+                <img src="../public/img/Logo - Marca/LetraMMnegroFT.png">
+            </div>
+            <div>
+                <nav class="OpcionesMenu">
+                    <ul>
+                        <li><a href="index.html"> Inicio </a></li>
+                        <li><a href="quienesSomos.html"> Quienes somos </a></li>
+                        <li><a href="productos.html"> Productos </a></li>
+                        <li><a href="formularioEnvio.html"> Mi carrito </a></li>
+                        <li><a href="contacto.html"> Contacto </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </main>
+
+        <div class="container">
+            <h1>Formulario de Envío:</h1>
+            <form class="cuadro" id="formulario-pedido">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required><br>
+                <label for="apellido">Apellido:</label><br>
+                <input type="text" id="apellido" name="apellido" required><br>
+                <label for="email">Correo Electrónico:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="telefono">Teléfono:</label><br>
+                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{8,10}" required><br>
+                <label for="direccion">Dirección de Envío:</label><br>
+                <textarea id="direccion" name="direccion" required></textarea><br>
+
+                <!-- Agregar campo de forma de pago -->
+                <label for="forma-pago">Seleccione una forma de Pago:</label><br>
+                <select id="forma-pago" name="forma-pago" required>
+                    <option value="">-</option>
+                    <option value="tarjeta">Tarjeta de Crédito</option>
+                    <option value="transferencia">Transferencia Bancaria</option>
+                    <option value="efectivo">Efectivo</option>
+                </select><br>
+
+                    <div id="carrito-container">
+                        <h2>Revisa tu carrito:</h2>
+                        <ul id="lista-productos"></ul>
+                        <div>Total: <span id="total"></span></div>
+                    </div>
+                
+                    <div class="contenedor-botones">
+                        <button type="submit" class="boton">Aceptar Envío</button>
+                        <button type="button" onclick="cancelarPedido()" class="boton">Cancelar Pedido</button>
+                        <button type="button" onclick="otroProducto()" class="boton">Elegir otro producto</button>
+                    </div>
+
+            </form>
+
+        </div>
+
+        <p></p>
+
+        <div class="espacio">
+            <a href="productos.html" class="boton">Volver a la Sección de productos</a>
+            <a href="index.html" class="boton">Volver al inicio</a>
+        </div>
+
+        <p></p>
+
+        <footer class="credito"> 
+            <p> Derechos Reservados &copy; 2024 - Ruth Gomez</p>
+        </footer>
+        
+    </body>
+</html>

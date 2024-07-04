@@ -1,0 +1,87 @@
+/* Contacto */
+.contacto {
+    border: 2px solid #333; 
+      padding: 20px;          
+      margin: 20px;           
+      border-radius: 15px;    
+      width: 300px;      
+      box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+  }
+  
+  .contacto a {
+    text-decoration: none;
+    color: #333; /* Color del texto */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .contacto a i {
+    margin-right: 10px;
+  }
+  
+  /* Estilo específico para el icono de WhatsApp */
+  .contacto a[href*="wa.me"] i {
+    color: #25d366; /* Color verde de WhatsApp */
+  }
+  
+  /* Texto */
+  .texto {
+    padding: 20px;
+  }
+  
+  .texto h1 {
+    color: #a963bc;
+  }
+  
+  .texto p {
+    line-height: 1.6;
+  }
+
+  /* Estilos para los campos de entrada */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea, select {
+    background-color: #f5f5f5;
+    color: #333;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: 60%;
+  }
+
+  /* Estilos para los botones */
+.boton {
+    background-color: #b18ab2; /* Color de fondo */
+    color: white; /* Color del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    padding: 10px 20px; /* Padding interno para aumentar el área de clic */
+    border: none; /* Sin bordes */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickeable */
+    transition: box-shadow 0.3s, transform 0.3s; /* Transiciones suaves para la sombra y transformación */
+    border-radius: 4px; /* Bordes redondeados */
+    width: 25%; /* Ancho fijo para cada botón */
+    text-align: center; /* Asegura que el texto esté centrado */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Añade una sombra sutil para un efecto 3D */
+}
+
+.boton:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más prominente en estado hover para un efecto elevado */
+    transform: translateY(-2px); /* Levanta ligeramente el botón al pasar el mouse */
+}
+  
+  .mapa {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 100%; /* Para asegurarse de que el mapa no exceda el tamaño del contenedor */
+    overflow: hidden; /* Oculta cualquier contenido que exceda el tamaño del contenedor */
+  }
+  
+  .mapa iframe {
+    width: 100%; /* Hace que el iframe ocupe el 100% del ancho del contenedor */
+    height: 100%; /* Hace que el iframe ocupe el 100% de la altura del contenedor */
+  }

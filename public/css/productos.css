@@ -1,0 +1,74 @@
+/* Productos - estilo */
+.ProductosContenedores {
+    font-style: italic;
+    font-size: 0.875rem;
+    color: purple;
+    margin-bottom: 20px;
+  }
+  
+  .italic {
+    font-style: italic;
+  }
+  
+  .boton-detalle-carrito {
+    border: none;
+    background-color: #b18ab2;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .boton-detalle-carrito:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  nav ul li a:hover {
+    border-bottom: 2px solid #d8bfd8;
+  }
+  
+  .ProductosContenedores {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1rem;
+  }
+  
+  .ProductoContenido {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .ProductoContenido img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  .ProductoContenido h4 {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  .ProductoContenido p {
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  .ProductoContenido span {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .ProductosContenedores:hover .imagen-completa {
+    display: block;
+  }
+  

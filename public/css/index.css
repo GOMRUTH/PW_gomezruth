@@ -1,0 +1,12 @@
+/*** Estilos específicos para la página principal ***/
+.collage {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+.collage img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Para bordes redondeados, opcional */
+  cursor: pointer; /* Para indicar que es clicable */
+}

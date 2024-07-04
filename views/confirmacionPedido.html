@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Pedido</title>
+    <link rel="stylesheet" href="../public/css/global.css">
+    <link rel="stylesheet" href="../public/css/CPed.css" type="text/css">
+</head>
+<body>
+    <main class="Contorno Principal">
+        <div class="BannerLogo">
+            <img src="../public/img/Logo - Marca/LetraMMnegroFT.png" alt="Logo">
+        </div>
+        <div>
+            <nav class="OpcionesMenu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="quienesSomos.html">Quienes somos</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="formularioEnvio.html">Mi carrito</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </main>
+
+    <h1>Confirmación de Pedido</h1>
+
+    <div class="detalle-pedido">
+        <h2>Datos del Pedido:</h2>
+        <div>
+            <p><strong>Nombre:</strong> <span id="nombre"></span></p>
+            <p><strong>Apellido:</strong> <span id="apellido"></span></p>
+            <p><strong>Correo Electrónico:</strong> <span id="email"></span></p>
+            <p><strong>Teléfono:</strong> <span id="telefono"></span></p>
+            <p><strong>Dirección de Envío:</strong> <span id="direccion"></span></p>
+            <p><strong>Forma de Pago:</strong> <span id="formaPago"></span></p>
+        </div>
+        <h2>Productos:</h2>
+        <ul id="lista-productos"></ul>
+        <h2>Total a Pagar:</h2>
+        <p><span id="total"></span></p>
+    </div>
+
+    <div class="espacio">
+        <a href="index.html" class="boton">Volver al Inicio</a>
+        <a href="productos.html" class="boton">Volver a Productos</a>
+    </div>
+    <p></p>
+
+    <footer class="credito"> 
+        <p>Derechos Reservados &copy; 2024 - Ruth Gomez</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Obtener los datos de confirmación del localStorage
+            const confirmacion = JSON.parse(localStorage.getItem('confirmacionPedido'));
+
+            // Mostrar los datos en la página
+            if (confirmacion) {
+                document.getElementById('nombre').textContent = confirmacion.nombre;
+                document.getElementById('apellido').textContent = confirmacion.apellido;
+                document.getElementById('email').textContent = confirmacion.email;
+                document.getElementById('telefono').textContent = confirmacion.telefono;
+                document.getElementById('direccion').textContent = confirmacion.direccion;
+                document.getElementById('formaPago').textContent = confirmacion.formaPago;
+
+                // Mostrar la lista de productos
+                const listaProductos = document.getElementById('lista-productos');
+                confirmacion.carrito.forEach(producto => {
+                    const li = document.createElement('li');
+                    li.textContent = `${producto.nombre} - Cantidad: ${producto.cantidad} - Precio unitario: $${producto.precio} - Subtotal: $${producto.precio * producto.cantidad}`;
+                    listaProductos.appendChild(li);
+                });
+
+                // Mostrar el total a pagar correctamente
+                const totalPagar = confirmacion.total;
+                document.getElementById('total').textContent = `$${totalPagar.toFixed(2)}`; // Asegura que el total se muestre como texto correctamente formateado
+            } else {
+                alert('No se encontraron datos de confirmación de pedido.');
+            }
+        });
+    </script>
+</body>
+</html>
